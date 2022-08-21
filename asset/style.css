@@ -6,7 +6,7 @@
 body{
     max-width: 800px;
     margin: auto;
-    height: 100vh;
+
     border: 1px solid grey;
 }
 h1{
@@ -108,7 +108,6 @@ ul input{
 }
 ul li{
     display: inline-block;
-    margin-bottom: 25px;
 }
 #list{
     position: relative;
@@ -123,10 +122,15 @@ ul li{
     position: absolute;
     right: 3%;
 }
-#list input:checked +label{
+#list input:checked + #label{
     text-decoration: line-through;
     
 }
-.clicked {
-    text-decoration: line-through;
+li{
+    margin-bottom: 20px;
+    
 }
+h3{
+    display: inline-block;
+}
+

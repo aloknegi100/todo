@@ -56,10 +56,19 @@
     <div id="list">
       <ul>
         <%for(i of task){%>
-        <input type="checkbox" id="checkbox" value="<%=i._id%>" />
-        <label for="checkbox"
-          ><li><h3 id="label"><%=i.description%></h3></li>
-        </label>
+        <li>
+          <div>
+            <input type="checkbox" id="checkbox" value="<%=i._id%>" />
+            <h3 id="label">&emsp14;&emsp14;&emsp14;<%= i.description%></h3>
+            <p>
+              &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;<i
+                class="fa-solid fa-calendar-days"
+              ></i>
+              <%=i.date.slice(0,10)%>
+            </p>
+          </div>
+        </li>
+
         <button id="displayCategory"><%=i.category%></button
         ><br />
 
