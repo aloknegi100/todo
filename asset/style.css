@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    max-width: 800px;
+    margin: auto;
+    height: 100vh;
+    border: 1px solid grey;
+}
+h1{
+    text-align: center;
+    color: gray;
+}
+h4{
+    color: gray;
+    
+}
+#description{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-top: 2%;
+    padding-left: 20px;
+    
+}
+#options{
+    display: flex;
+    height: 80px;
+
+}
+#description input {
+    margin-bottom: 2%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 90%;
+    height: auto;
+
+}
+#category{
+    padding-left: 20px;
+    margin-top: 0%;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 50%;
+    padding-top: 5px;
+}
+#date {
+    padding-left: 20px;
+    margin-top: 0%;
+    border-bottom: 1px solid grey;
+    width: 50%;
+    padding-top: 5px;
+}
+#buttons{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#add-task{
+    background-color: darkgray;
+    height: 50px;
+    width: 100px;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+#delete-task{
+    background-color: red;
+    height: 50px;
+    width: 120px;
+    margin-left: 5px;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+#add-task:hover{
+    transform: scale(1.03);
+}
+#delete-task:hover{
+    transform: scale(1.03);
+}
+ul{
+    margin-left: 20px;
+    list-style: none;
+    color: gray;
+}
+#dropdown{
+    border: none;
+    width: 90%;
+    outline: none;
+}
+#date input{
+    width: 90%;
+    border: none;
+    outline: none;
+}
+ul input{
+    display: inline-block;
+    
+}
+ul li{
+    display: inline-block;
+    margin-bottom: 25px;
+}
+#list{
+    position: relative;
+    
+}
+#displayCategory{
+    background-color: blueviolet;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    right: 3%;
+}
+#list input:checked +label{
+    text-decoration: line-through;
+    
+}
+.clicked {
+    text-decoration: line-through;
+}

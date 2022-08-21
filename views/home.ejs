@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f3304285f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../asset/style.css" />
+    <title><%=title %></title>
+  </head>
+  <body>
+    <h1>TODO App</h1>
+    <form action="/add" method="post">
+      <div id="description">
+        <h4>DESCRIPTION</h4>
+        <input
+          type="text"
+          name="description"
+          placeholder="What do you need to do?"
+        />
+      </div>
+      <div id="options">
+        <div id="category">
+          <h4>CATEGORY</h4>
+          <select name="category" id="dropdown">
+            <option value="">Choose a category</option>
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div id="date">
+          <h4>DUE DATE</h4>
+          <input
+            type="date"
+            name="date"
+            placeholder="What do you need to do?"
+          />
+        </div>
+      </div>
+      <div id="buttons">
+        <button id="add-task" type="submit">
+          <i class="fa-solid fa-plus"></i> ADD TASK
+        </button>
+        <button id="delete-task">
+          <i class="fa-solid fa-trash-can"></i> DELETE TASK
+        </button>
+      </div>
+    </form>
+
+    <div id="list">
+      <ul>
+        <%for(i of task){%>
+        <input type="checkbox" id="checkbox" value="<%=i._id%>" />
+        <label for="checkbox"
+          ><li><h3 id="label"><%=i.description%></h3></li>
+        </label>
+        <button id="displayCategory"><%=i.category%></button
+        ><br />
+
+        <%}%>
+      </ul>
+    </div>
+    <script src="../asset/script.js"></script>
+  </body>
+</html>
