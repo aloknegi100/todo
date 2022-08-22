@@ -47,7 +47,7 @@
         <button id="add-task" type="submit">
           <i class="fa-solid fa-plus"></i> ADD TASK
         </button>
-        <button id="delete-task">
+        <button id="delete-task" type="button" href="">
           <i class="fa-solid fa-trash-can"></i> DELETE TASK
         </button>
       </div>
@@ -58,7 +58,7 @@
         <%for(i of task){%>
         <li>
           <div>
-            <input type="checkbox" id="checkbox" value="<%=i._id%>" />
+            <input type="checkbox" class="checkbox" data-id="<%=i._id%>" />
             <h3 id="label">&emsp14;&emsp14;&emsp14;<%= i.description%></h3>
             <p>
               &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;<i
